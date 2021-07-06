@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>prueba</title>
+
+    <style>
+      body{
+        background-color: #282525;
+      }
+
+      /*---------------------Diseño de cuadros----------------------------*/
+      .cuadros{
+        width: 30vh;
+        height: 30vh;
+        border-style: solid;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.25);
+        border-color: rgba(227, 225, 225, 0.66);
+      }
+      #cuadro1{
+        background-color: rgba(76, 76, 187, 0.31);
+        border-color: blue;
+      }
+      #cuadro2{
+        background-color: rgba(0, 128, 0, 0.4);
+        border-color: green;
+        align-items: flex-end;
+      }
+      #cuadro3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(rgba(253, 18, 18, 0.65), rgba(202, 84, 246, 0.68));
+        font-size: 70px;
+        color: rgba(255, 255, 255, 0.93);
+      }
+      #cuadro4{
+        background-color: rgba(255, 0, 0, 0.29);
+        border-color: red;
+      }
+      #cuadro5{
+        border-color: yellow;
+        background-color: rgba(255, 255, 0, 0.34);
+        align-items: flex-end;
+      }
+
+      /*-------------------Ajustes de columnas-----------------------*/
+      #column1{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      #column2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #column3{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      /*-----------------------------Contenederos---------------------------------*/
+      #contenedor{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="contenedor">
+        <div id="column1">
+          <div id="cuadro1" class="cuadros" v-on:click="Oprimir(1)">
+          </div>
+          <div id="cuadro2" class="cuadros" v-on:click="Oprimir(2)">
+          </div>
+        </div>
+        <div id="column2">
+          <div id="cuadro3" class="cuadros" v-on:click="Oprimir(3)">
+            ▶
+          </div>
+        </div>
+        <div id="column3">
+          <div id="cuadro4" class="cuadros" v-on:click="Oprimir(4)">
+          </div>
+          <div id="cuadro5" class="cuadros" v-on:click="Oprimir(5)">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

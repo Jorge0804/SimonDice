@@ -12,38 +12,38 @@
 
       /*---------------------Diseño de cuadros----------------------------*/
       .cuadros{
+        cursor: pointer;
         width: 30vh;
         height: 30vh;
         border-style: solid;
-        border-radius: 20px;
-        background-color: rgba(255, 255, 255, 0.25);
-        border-color: rgba(227, 225, 225, 0.66);
+        border-radius: 30px;
+        border-width: 3px;
+        background-color: rgba(127, 157, 203, 0.2);
+        border-color: rgba(172, 167, 177, 0.66);
       }
       #cuadro1{
-        background-color: rgba(76, 76, 187, 0.31);
+        align-items: flex-start;
         border-color: blue;
       }
       #cuadro2{
-        background-color: rgba(0, 128, 0, 0.4);
-        border-color: green;
         align-items: flex-end;
+        border-color: green;
       }
       #cuadro3{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(rgba(253, 18, 18, 0.65), rgba(202, 84, 246, 0.68));
         font-size: 70px;
-        color: rgba(255, 255, 255, 0.93);
+        color: rgba(255, 255, 255, 0.95);
+        border-color: rgba(185, 66, 100, 0.84);
       }
       #cuadro4{
-        background-color: rgba(255, 0, 0, 0.29);
-        border-color: red;
+        align-items: flex-start;
+        border-color: #ff3333;
       }
       #cuadro5{
-        border-color: yellow;
-        background-color: rgba(255, 255, 0, 0.34);
         align-items: flex-end;
+        border-color: #5a5a01;
       }
 
       /*-------------------Ajustes de columnas-----------------------*/
@@ -61,6 +61,8 @@
       #column3{
         display: flex;
         justify-content: space-between;
+        text-align: center;
+        text-align-all: center;
         flex-direction: row;
         align-items: flex-start;
       }
@@ -77,20 +79,19 @@
     <div id="app">
       <div id="contenedor">
         <div id="column1">
-          <div id="cuadro1" class="cuadros" v-on:click="Oprimir(1)">
+          <div id="cuadro1" class="cuadros" v-bind:style="[styleCuadro1.active||inicio?styleCuadro1:'']" v-on:click="Oprimir(1)">
           </div>
-          <div id="cuadro2" class="cuadros" v-on:click="Oprimir(2)">
+          <div id="cuadro2" class="cuadros" v-bind:style="[styleCuadro2.active||inicio?styleCuadro2:'']" v-on:click="Oprimir(2)">
           </div>
         </div>
         <div id="column2">
-          <div id="cuadro3" class="cuadros" v-on:click="Oprimir(3)">
-            ▶
+          <div id="cuadro3" class="cuadros" v-bind:style="[styleCuadro3.active||inicio?styleCuadro3:'']" v-on:click="Oprimir(3)" v-text="play">
           </div>
         </div>
         <div id="column3">
-          <div id="cuadro4" class="cuadros" v-on:click="Oprimir(4)">
+          <div id="cuadro4" class="cuadros" v-bind:style="[styleCuadro4.active||inicio?styleCuadro4:'']" v-on:click="Oprimir(4)">
           </div>
-          <div id="cuadro5" class="cuadros" v-on:click="Oprimir(5)">
+          <div id="cuadro5" class="cuadros" v-bind:style="[styleCuadro5.active||inicio?styleCuadro5:'']" v-on:click="Oprimir(5)">
           </div>
         </div>
       </div>
